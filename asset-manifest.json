@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/cars-for-rent/static/css/main.7b9dc3b4.css",
+    "main.js": "/cars-for-rent/static/js/main.e1c644e7.js",
+    "static/media/heart.svg": "/cars-for-rent/static/media/heart.282d936f414f4c6884ab9306a91dad67.svg",
+    "static/media/heart-active.svg": "/cars-for-rent/static/media/heart-active.97847e9195943f61800c97807e735d4f.svg",
+    "index.html": "/cars-for-rent/index.html",
+    "static/media/cross.svg": "/cars-for-rent/static/media/cross.f3cbdd58dc25ca7cbb3d242106b56fb9.svg",
+    "main.7b9dc3b4.css.map": "/cars-for-rent/static/css/main.7b9dc3b4.css.map",
+    "main.e1c644e7.js.map": "/cars-for-rent/static/js/main.e1c644e7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b9dc3b4.css",
+    "static/js/main.e1c644e7.js"
+  ]
+}
