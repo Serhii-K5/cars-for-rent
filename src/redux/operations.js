@@ -14,3 +14,15 @@ export const fetchAdverts = createAsyncThunk(
     }
   }
 );
+
+export const fetchUsers = createAsyncThunk(
+  'users/fetchAll',
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios.get('/users');
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);

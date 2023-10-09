@@ -60,7 +60,7 @@ export const Li = styled.li`
   color: var(--text-color-secondary-black);
   font-size: 12px;
   line-height: 1.5;
-  border-right: 1px solid rgba(18, 20, 23, 0.1);
+  border-right: 1px solid var(--text-color-secondary-black);
 
   &:last-child {
     border-right: none;

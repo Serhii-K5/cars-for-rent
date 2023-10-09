@@ -20,9 +20,7 @@ import {
 import Cross from "assets/images/svg/cross.svg";
 
 export default function AdvertModal({ card, onClose }) {
-  const arrayOfConditions = card.rentalConditions.split("\n");
-  // const minimumAge = arrayOfConditions[0].split(":");
-  // console.log(minimumAge);
+  const arrayConditions = card.rentalConditions.split("\n");  
   const mileage = String(card.mileage / 1000).replace(/\./g, ",");
 
   useEffect(() => {
@@ -94,7 +92,7 @@ export default function AdvertModal({ card, onClose }) {
           <div>
             <SubTitle>Rental Conditions:</SubTitle>
             <ConditionsUl>
-              {arrayOfConditions.map((item) => {
+              {arrayConditions.map((item) => {
                 return <ConditionLi key={nanoid()}>{item}</ConditionLi>;
               })}
               <ConditionLi>
