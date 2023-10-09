@@ -138,7 +138,7 @@ export const A = styled.a`
   justify-content: center;
   width: 168px;
   height: 44px;
-  background-color: var(--accent-color);
+  background-color: var(--bg-button-color);
   color: #fff;
   font-family: inherit;
   font-size: 14px;

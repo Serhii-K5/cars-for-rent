@@ -23,7 +23,6 @@ export default function Layout() {
   //   setUnderlineShown(page);
   // };
   const handleLog = () => {
-    return
     setIsRegistered(!isRegistered);
   };
   

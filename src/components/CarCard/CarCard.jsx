@@ -98,11 +98,11 @@ export default function Advert({ card }) {
             <Li>{card.type}</Li>
             <Li>{card.mileage}</Li>
             <Li
-              style={{
-                overflow: "hidden",
-                whiteSpace: "wrap",
-                textOverflow: "ellipsis",
-              }}
+              // style={{
+              //   overflow: "hidden",
+              //   whiteSpace: "wrap",
+              //   textOverflow: "ellipsis",
+              // }}
             >
               {card.accessories[0]}
             </Li>

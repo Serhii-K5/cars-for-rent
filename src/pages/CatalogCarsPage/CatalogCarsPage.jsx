@@ -6,11 +6,10 @@ import CarCard from "components/CarCard/CarCard";
 import { selectAdverts } from "redux/selectors";
 
 import {
-  // H1,
   Ul,
 } from './CatalogCarsPage.styled';
 
-
+import Footer from '../../components/Footer/Footer';
 
 const CatalogCarsPage = () => {
   const dispatch = useDispatch();
@@ -22,8 +21,6 @@ const CatalogCarsPage = () => {
 
   return (
     <>
-      {/* <H1>CatalogCarsPage</H1> */}
-      
       {adverts.length > 0 && <Ul>
         {adverts.map((item) => (
           <li key={item.id}>
@@ -32,6 +29,7 @@ const CatalogCarsPage = () => {
         ))}
       </Ul>
       }
+      <Footer />
     </>
   );
 };

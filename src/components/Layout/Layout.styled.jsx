@@ -6,14 +6,16 @@ export const Header = styled.div`
   margin-bottom: 20px;
   gap: 20px;
   padding: 7px 16px;
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.5);  
+  max-width: 1440px;
+  text-align: center;
 `;
 
 export const Container = styled.div`
   margin: 0;
   padding: 7px;
   height: 50px;
-
+  
 `;
 
 export const NavContainer = styled.nav`
