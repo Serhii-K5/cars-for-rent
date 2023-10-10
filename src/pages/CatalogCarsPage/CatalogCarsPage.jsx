@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { fetchAdverts } from "redux/operations";
 
 import CarCard from "components/CarCard/CarCard";
@@ -9,19 +9,26 @@ import {
   Ul,
 } from './CatalogCarsPage.styled';
 
-import Footer from '../../components/Footer/Footer';
+// import Footer from '../../components/Footer/Footer';
+import FilterPanel from './FilterPanel';
 
 const CatalogCarsPage = () => {
   const dispatch = useDispatch();
   const adverts = useSelector(selectAdverts);
+  const [filteredData, setFilteredData] = useState(adverts);
 
   useEffect(() => {
     dispatch(fetchAdverts());
   }, [dispatch]);
 
+  const handleFilter = filteredData => {
+    setFilteredData(filteredData);
+  };
+
   return (
     <>
-      {adverts.length > 0 && <Ul>
+      <FilterPanel data={adverts} onFilter={handleFilter} />      
+      {filteredData.length > 0 && <Ul>
         {adverts.map((item) => (
           <li key={item.id}>
             <CarCard card={item} />
@@ -29,7 +36,15 @@ const CatalogCarsPage = () => {
         ))}
       </Ul>
       }
-      <Footer />
+      {/* {adverts.length > 0 && <Ul>
+        {adverts.map((item) => (
+          <li key={item.id}>
+            <CarCard card={item} />
+          </li>
+        ))}
+      </Ul>
+      } */}
+      {/* <Footer /> */}
     </>
   );
 };

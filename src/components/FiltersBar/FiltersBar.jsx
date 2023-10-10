@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import FilterPanel from '../Filters/Filters';
+import FilterPanel from './FilterPanel';
 
-function FiltersBar(initialData) {
-  // const initialData = [
-  //   { field1: 'A', field2: 'B', field3: 'C', field4: 'D' },
-  //   // Добавьте другие элементы данных
-  // ];
+function FiltersBar() {
+  const initialData = [
+    { field1: 'A', field2: 'B', field3: 'C', field4: 'D' },
+    // Добавьте другие элементы данных
+  ];
 
   const [filteredData, setFilteredData] = useState(initialData);
 
