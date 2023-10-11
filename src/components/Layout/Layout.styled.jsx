@@ -3,32 +3,31 @@ import { NavLink } from "react-router-dom";
 
 export const Header = styled.div`
   display: flex;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   gap: 20px;
   padding: 7px 16px;
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.5);  
+  // box-shadow: 0px 4px 4px rgba(0,0,0,0.5);  
   max-width: 1440px;
   text-align: center;
 `;
 
-export const Container = styled.div`
-  margin: 0;
+export const Div = styled.div`
+  margin-bottom: 50px;
   padding: 7px;
-  height: 50px;
-  
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.5);  
 `;
 
 export const NavContainer = styled.nav`
   display: flex;
   margin: 0;
   align-items: center;
-  gap: 16px;  
+  gap: 30px;  
 `;
 
 export const NavLinkStyle = styled(NavLink)`
   color: #000;
   position: relative;
-  font-size: larger;
+  font-size: 36px;
   font-weight: 700;
   
   &:hover {
@@ -50,6 +49,4 @@ export const LoginBtn = styled.button`
   &:hover {
     color: var(--text-color-active-blue);
   }
-
-  
 `;

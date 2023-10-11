@@ -9,14 +9,13 @@ import {
   Ul,
 } from './CatalogCarsPage.styled';
 
-// import Footer from '../../components/Footer/Footer';
-import FilterPanel from './FilterPanel';
+import FilterPanel from 'components/FilterPanel/FilterPanel';
 
 const CatalogCarsPage = () => {
   const dispatch = useDispatch();
   const adverts = useSelector(selectAdverts);
   const [filteredData, setFilteredData] = useState(adverts);
-
+  
   useEffect(() => {
     dispatch(fetchAdverts());
   }, [dispatch]);
@@ -28,23 +27,22 @@ const CatalogCarsPage = () => {
   return (
     <>
       <FilterPanel data={adverts} onFilter={handleFilter} />      
-      {filteredData.length > 0 && <Ul>
-        {adverts.map((item) => (
-          <li key={item.id}>
-            <CarCard card={item} />
-          </li>
-        ))}
-      </Ul>
+      {filteredData.length > 0 && (<Ul>
+          {filteredData.map((item) => (
+            <li key={item.id}>
+              <CarCard card={item} />
+            </li>
+          ))}
+        </Ul>)
       }
-      {/* {adverts.length > 0 && <Ul>
-        {adverts.map((item) => (
-          <li key={item.id}>
-            <CarCard card={item} />
-          </li>
-        ))}
-      </Ul>
-      } */}
-      {/* <Footer /> */}
+      {filteredData.length === 0 && adverts.length > 0 && (<Ul>
+          {adverts.map((item) => (
+            <li key={item.id}>
+              <CarCard card={item} />
+            </li>
+          ))}
+        </Ul>)
+      }
     </>
   );
 };

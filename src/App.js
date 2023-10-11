@@ -10,9 +10,9 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route path="catalog" element={<CatalogCarsPage />} />
+        <Route path="catalog" element={<CatalogCarsPage data={[]} />} />
         <Route path="favorites" element={<FavoritesPage />} />
-      </Route>
+      </Route>      
       <Route path="*" element={<Navigate to="/" replace />} />        
     </Routes>
   );

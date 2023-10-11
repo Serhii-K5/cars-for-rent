@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-// export const H1 = styled.h1`
-//   color: grey;
-// `
-
 export const Ul = styled.ul`
   display: flex;
   max-width: 1440px;
