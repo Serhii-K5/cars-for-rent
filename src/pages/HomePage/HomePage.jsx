@@ -23,9 +23,9 @@ const HomePage = () => {
           <div>
             <H1>Car rental worldwide</H1>
             <P>Best prices and wide selection of cars</P>
-            <a href="#" class="btn">
-              Book now
-            </a>
+            {/* <a href="#" class="btn"> */}
+             <P>Book now</P>
+            {/* </a> */}
           </div>
         </Section>
 
@@ -36,9 +36,9 @@ const HomePage = () => {
               We are a leading car rental company providing high quality service
               and a variety of cars at affordable prices.
             </P>
-            <a href="#" class="btn">
-              To learn more
-            </a>
+            {/* <a href="#" class="btn"> */}
+              <P>To learn more</P>
+            {/* </a> */}
           </div>
           <div style={{textAlign: "center" }}>
             <img src={cars} alt="Car rent" style={{margin: "auto", width: "800px", heigth: "500px" }} />
@@ -59,9 +59,9 @@ const HomePage = () => {
         <Section>
           <H2>Contact us</H2>
           <P>If you have questions or need help, сontact us.</P>
-          <a href="#" class="btn">
-            Contact
-          </a>
+          {/* <a href="#" class="btn"> */}
+            <P>Contact</P>
+          {/* </a> */}
         </Section>
       </Container>
       <Footer />
