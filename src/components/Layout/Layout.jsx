@@ -14,7 +14,7 @@ export default function Layout() {
     <>
       <Div>
         <Header>
-          <img src={logo} alt="Logo company" style={{width: "120px"}} />
+          <img src={logo} alt="Logo company" style={{width: "120px", boxShadow: "1px 1px 0px rgba(255,255,255)"}} />
           <NavContainer>
             <NavLinkStyle to="/" >
                 Home

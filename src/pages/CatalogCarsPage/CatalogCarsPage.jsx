@@ -25,25 +25,27 @@ const CatalogCarsPage = () => {
   };
 
   return (
-    <>
-      <FilterPanel data={adverts} onFilter={handleFilter} />      
-      {filteredData.length > 0 && (<Ul>
-          {filteredData.map((item) => (
+    <div style={{ padding: '50px' }}>
+      <FilterPanel data={adverts} onFilter={handleFilter} />
+      {filteredData.length > 0 && (
+        <Ul>
+          {filteredData.map(item => (
             <li key={item.id}>
               <CarCard card={item} />
             </li>
           ))}
-        </Ul>)
-      }
-      {filteredData.length === 0 && adverts.length > 0 && (<Ul>
-          {adverts.map((item) => (
+        </Ul>
+      )}
+      {filteredData.length === 0 && adverts.length > 0 && (
+        <Ul>
+          {adverts.map(item => (
             <li key={item.id}>
               <CarCard card={item} />
             </li>
           ))}
-        </Ul>)
-      }
-    </>
+        </Ul>
+      )}
+    </div>
   );
 };
 

@@ -12,9 +12,11 @@ export const Header = styled.div`
 `;
 
 export const Div = styled.div`
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
   padding: 7px;
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.5);  
+  background-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+  background: linear-gradient(to top, var(--bg-primary-green), var(--bg-second-green), var(--bg-second-green), var(--bg-primary-green)); 
 `;
 
 export const NavContainer = styled.nav`
@@ -28,7 +30,8 @@ export const NavLinkStyle = styled(NavLink)`
   color: #000;
   position: relative;
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 700;  
+  text-shadow: 1px 1px 0px rgba(255,255,255,20);
   
   &:hover {
     color: var(--text-color-active-blue);
