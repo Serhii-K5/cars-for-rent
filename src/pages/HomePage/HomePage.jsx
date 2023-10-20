@@ -1,12 +1,18 @@
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { fetchAdverts } from "redux/operations";
+
+import CarCard from "components/CarCard/CarCard";
+import { selectAdverts } from "redux/selectors";
+
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { MdLocationPin } from 'react-icons/md';
 import { AiOutlineMail } from 'react-icons/ai';
-import Swiper from 'swiper';
-import 'swiper/css';
 import {
   Ul,
   A,
   Aside,
+  Li,
   NavContainer,
   NavLinkStyle,
   Container,
@@ -25,20 +31,21 @@ import car3 from '../../assets/images/auto/car-rent-3.jpg';
 import car4 from '../../assets/images/auto/car-rent-4.jpg';
 import car5 from '../../assets/images/auto/car-rent-5.jpg';
 // import cars from '../../assets/images/auto/cars-rent.jpg';
-import MySwiper from "components/Swiper/Swiper"  
+import CarsSlider from "../../components/Slider/Slider";  
 
 const HomePage = () => {
-  // const swiper = new Swiper(...);
-  // var mySwiper = new Swiper('.swiper-container', {
-  //   // Параметры слайдера
-  //   slidesPerView: 1, // Количество видимых слайдов
-  //   spaceBetween: 10, // Расстояние между слайдами
-  //   loop: true, // Бесконечная прокрутка
-  //   navigation: {
-  //     nextEl: '.swiper-button-next', // Кнопка "Следующий слайд"
-  //     prevEl: '.swiper-button-prev', // Кнопка "Предыдущий слайд"
-  //   },
-  // });
+  const dispatch = useDispatch();
+  const adverts = useSelector(selectAdverts);
+  const [filteredData, setFilteredData] = useState(adverts);
+  
+  useEffect(() => {
+    dispatch(fetchAdverts());
+  }, [dispatch]);
+
+  const handleFilter = filteredData => {
+    setFilteredData(filteredData);
+  };
+
   return (
     <>
       <Ul>
@@ -52,27 +59,18 @@ const HomePage = () => {
           <A href="mailto:kcn@gmail.com"> <AiOutlineMail /> kcn@ggmail.com</A>
         </li>
       </Ul>
-      <MySwiper />
-      {/* {mySwiper}
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Слайд 1</div>
-          <div class="swiper-slide">Слайд 2</div>
-          <div class="swiper-slide">Слайд 3</div> */}
-          {/* <!-- Добавьте дополнительные слайды по мере необходимости --> */}
-        {/* </div>
-      </div> */}
+      <CarsSlider />
       <Container>
         <div style={{display: "flex"}}>
           <Div>
             <Section >
               <div>
                 <H1>Car rental worldwide</H1>
-                <P>Are you looking for the best prices, 
-                  a wide selection of cars and quality service? 
-                  Or do you urgently need a reliable car? 
-                  You've come to the right place. 
-                </P>
+                <P> <i>-  Are you looking for the best prices, 
+                  a wide selection of cars and quality service?  
+                </i></P>
+                <P><i> -  Or do you urgently need a reliable car? </i></P>
+                <P> <b>You've come to the right place.</b> </P>
                 <A href="tel:+380730000000">
                   <p><span> </span></p>
                   <P>Book your car now</P>
@@ -102,9 +100,9 @@ const HomePage = () => {
                     Home
                 </NavLinkStyle>
                 <ul style={{padding: "0 25px"}}>
-                  <li><a href="#section1"> - About Us</a></li>
-                  <li><a href="#section2"> - Our fleet</a></li>
-                  <li><a href="#section3"> - Contact us</a></li>
+                  <Li><a href="#section1"> - About Us</a></Li>
+                  <Li><a href="#section2"> - Our fleet</a></Li>
+                  <Li><a href="#section3"> - Contact us</a></Li>
                 </ul>
                 <NavLinkStyle to="/catalog">
                   Catalog
@@ -115,14 +113,29 @@ const HomePage = () => {
         </div>
 
         <Section>
-          <h2 id="section2">Our fleet</h2>
-          <div style={{ display: "flex" }}>
-            <Img src={car1} alt="Car rent 1"></Img>
-            <Img src={car2} alt="Car rent 2"></Img>
-            <Img src={car3} alt="Car rent 3"></Img>
-            <Img src={car4} alt="Car rent 4"></Img>
-            <Img src={car5} alt="Car rent 5"></Img>
-          </div>
+          <H2 id="section2">Our fleet</H2>
+          {adverts.length > 0 && (
+            <div style={{ display: "flex" }}>
+              <Img src={car1} alt="Car rent 1"></Img>
+              <Img src={car2} alt="Car rent 2"></Img>
+              <Img src={car3} alt="Car rent 3"></Img>
+              <Img src={car4} alt="Car rent 4"></Img>
+              <Img src={car5} alt="Car rent 5"></Img>
+            </div>
+          )}          
+          {filteredData.length === 0 && adverts.length > 0 && (
+            <Ul>
+              {adverts.map(item => (
+                <li key={item.id}>
+                  <CarCard card={item} />
+                </li>
+              ))}
+              {adverts}
+            </Ul>
+          )}
+
+          <p><NavLinkStyle to="/catalog"> See more... </NavLinkStyle></p>
+
         </Section>
 
         <Section>

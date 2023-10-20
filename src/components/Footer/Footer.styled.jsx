@@ -6,6 +6,7 @@ export const FooterStyle = styled.footer`
   // box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
   background-color: var(--text-color-grey);
   text-align: center;
+  font-size: 24px;
 `
 export const P = styled.p`
   color: rgba(0,0,0,0.6);

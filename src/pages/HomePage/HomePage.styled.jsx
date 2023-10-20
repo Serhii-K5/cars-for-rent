@@ -7,16 +7,21 @@ export const Ul = styled.ul`
   justify-content: center;
   padding: 16px 24px;
   color: var(--text-color-blue);
+  
   gap: 30px;
   font-size: 30px;
   text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 `;
 
 export const A = styled.a`
   // color: inherit;  
-  color: var(--text-color-blue);
+  // color: var(--text-color-blue);
   text-align: center;
-  text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+  // text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+
+  color: rgba(0,0,0,0.6);
+  text-shadow: 1px 1px 0px rgba(255,255,255,20);
 `;
 
 export const Container = styled.div`
@@ -26,11 +31,27 @@ export const Container = styled.div`
 `;
 
 export const Div = styled.div`
-  width: 90%; 
-  background-image: url(${BgImg});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: rgba(255, 0, 0, 0.5);
+  position: relative;
+  padding: 0 16px;
+  width: 90%;
+  background: #5C97FF;
+  overflow: hidden;
+  
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.6;
+    background-image: url(${BgImg});
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+  };
 `;
 
 export const H1 = styled.h1`
@@ -49,7 +70,10 @@ export const H2 = styled.h2`
 `;
 
 export const Section = styled.section`
+  margin-top: 50px;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 3;
 `;
 
 export const Img = styled.img`
@@ -67,6 +91,14 @@ export const Aside = styled.aside`
   & > p {
     margin: 0.5rem;
   }
+`
+
+export const Li = styled.li`
+
+  :hover, active {
+    color: var(--text-color-active-blue); 
+  }
+  
 `
 export const NavContainer = styled.nav`
   display: flex;
