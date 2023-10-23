@@ -17,7 +17,7 @@
 }
 
 html {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
 body {
@@ -34,6 +34,8 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  border: none;
+  background-color: transparent;
 }
 a {
   text-decoration: none;

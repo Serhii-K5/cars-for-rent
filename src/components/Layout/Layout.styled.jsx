@@ -1,5 +1,25 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import BgLogoImg from "assets/images/logo.png";
+
+export const BgLogo = styled.div`
+  position: relative;
+  top: 8px;  
+  width: 140px;
+  background-image: url(${BgLogoImg});
+  background-repeat: no-repeat;
+  // background-position: 50% 0;
+  background-size: 100%;
+`;
+
+export const TextLogo = styled.p`
+  position: relative;
+  top: -12px;
+  text-align: left;
+  font-size: 45px;
+  text-shadow: 1px 1px 0px rgba(255,255,255,20);
+`;
+
 
 export const Header = styled.div`
   display: flex;
@@ -11,6 +31,7 @@ export const Header = styled.div`
   // box-shadow: 0px 4px 4px rgba(0,0,0,0.5);  
   max-width: 1440px;
   text-align: center;
+  align-items: center;
 `;
 
 export const Div = styled.div`

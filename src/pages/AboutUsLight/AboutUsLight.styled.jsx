@@ -2,10 +2,9 @@ import styled from 'styled-components';
 import { NavLink } from "react-router-dom";
 import BgImg from "assets/images/auto/cars-rent.jpg";
 
-
 export const Ul = styled.ul`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 16px 24px;
   color: var(--text-color-blue);
   
@@ -23,14 +22,6 @@ export const A = styled.a`
 
   color: rgba(0,0,0,0.6);
   text-shadow: 1px 1px 0px rgba(255,255,255,20);
-
-  &:hover {
-    color: var(--text-color-active-blue);
-  }
-
-  &.active {
-    color: var(--text-color-active-blue);
-  }
 `;
 
 export const Container = styled.div`
@@ -43,7 +34,7 @@ export const Div = styled.div`
   position: relative;
   padding: 0 16px;
   width: 90%;
-  background: var(--text-color-white);
+  background: #5C97FF;
   overflow: hidden;
   
   &:before {
@@ -55,7 +46,7 @@ export const Div = styled.div`
     width: 100%;
     height: 100%;
     z-index: 2;
-    opacity: 0.1;
+    opacity: 0.6;
     background-image: url(${BgImg});
     background-repeat: no-repeat;
     background-position: 50% 0;
@@ -136,30 +127,12 @@ export const NavContainer = styled.nav`
 `;
 
 export const NavLinkStyle = styled(NavLink)`
-color: #000;
-position: relative;
-font-size: 36px;
-font-weight: 700;
-text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
-
-&:hover {
-  color: var(--text-color-active-blue);
-}
-
-&.active {
-  color: var(--text-color-active-blue);
-}
-`;
-
-export const Button = styled.button`
-  border: none;
-  background-color: transparent;
   color: #000;
   position: relative;
   font-size: 36px;
   font-weight: 700;
   text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
-
+  
   &:hover {
     color: var(--text-color-active-blue);
   }
@@ -169,3 +142,6 @@ export const Button = styled.button`
   }
 `;
 
+export const B = styled.b`
+  font-size: 30px;
+`;

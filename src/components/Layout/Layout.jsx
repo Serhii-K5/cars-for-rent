@@ -1,12 +1,16 @@
 import { Outlet } from "react-router-dom";
 import {
+  BgLogo,
+  TextLogo,
   Header,
   NavContainer,
   NavLinkStyle,
   Div,
 } from "./Layout.styled";
 
-import logo from "../../assets/images/logo.png";
+import AdressBar from "../AdressBar/AdressBar";
+
+// import logo from "../../assets/images/logo.png";
 
 export default function Layout() {
   
@@ -14,7 +18,10 @@ export default function Layout() {
     <>
       <Div>
         <Header>
-          <img src={logo} alt="Logo company" style={{width: "120px", boxShadow: "1px 1px 0px rgba(255,255,255)"}} />
+          <BgLogo>
+            <TextLogo><b> KCN </b></TextLogo>
+          </BgLogo>
+          {/* <img src={logo} alt="Logo company" style={{width: "120px", boxShadow: "1px 1px 0px rgba(255,255,255)"}} /> */}
           <NavContainer>
             <NavLinkStyle to="/" >
                 Home
@@ -24,6 +31,7 @@ export default function Layout() {
             </NavLinkStyle>
             <NavLinkStyle to="/favorites">Favorites</NavLinkStyle>
           </NavContainer>
+          <AdressBar />
         </Header>
       </Div>
       
