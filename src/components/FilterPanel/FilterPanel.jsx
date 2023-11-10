@@ -19,15 +19,18 @@ import chevron from "assets/images/svg/chevron-down.svg";
 const FilterPanel = ({ data, onFilter }) => {
   const [filterByDropdown1, setFilterByDropdown1] = useState('');
   const [filterByDropdown2, setFilterByDropdown2] = useState('');
+  const [chevronRotation1, setCchevronRotation1] = useState(false);
+  const [chevronRotation2, setCchevronRotation2] = useState(false);  
   const [filterByInput1, setFilterByInput1] = useState('');
   const [filterByInput2, setFilterByInput2] = useState('');
 
   const handleFilter = () => {
     const filteredData = data.filter(item => {
       const matchDropdown1 = filterByDropdown1 === '' || item.make === filterByDropdown1;
-      const matchDropdown2 = filterByDropdown2 === '' || String(item.rentalPrice.slice(1)) === String(filterByDropdown2);
-      const matchInput1 = filterByInput1 === '' || item.mileage - 5 === +filterByInput1 || item.mileage - 5 > +filterByInput1;
-      const matchInput2 = filterByInput2 === '' || item.mileage + 5 === +filterByInput2 || item.mileage + 5 < +filterByInput2;
+      const matchDropdown2 = filterByDropdown2 === '' || String(item.rentalPrice.slice(1)) === String(filterByDropdown2)
+        || (String(Number(item.rentalPrice.slice(1))) > String(Number(filterByDropdown2)) && String(Number(item.rentalPrice.slice(1))) < String(Number(filterByDropdown2) + 10));
+      const matchInput1 = filterByInput1 === '' || item.mileage === 0 + filterByInput1 || item.mileage > 0 + filterByInput1;
+      const matchInput2 = filterByInput2 === '' || item.mileage === 0 + filterByInput2 || item.mileage < 0 + filterByInput2;
 
       return matchDropdown1 && matchDropdown2 && matchInput1 && matchInput2;
     });
@@ -60,9 +63,10 @@ const FilterPanel = ({ data, onFilter }) => {
       <Div>
         <Label>Car brand</Label>
         <Select onChange={e => setFilterByDropdown1(e.target.value)}
-          style={{ width: "224px" }}
+          style={{ width: "224px"}}
           placeholder={'Enter the text'}
           defaultValue={""}
+          onClick={e => setCchevronRotation1(!chevronRotation1)}
         > 
           <option key={0} value={""}>{"Enter the text"}</option>  
           {brandList.length > 0 && brandList.map((item, index) => {
@@ -73,6 +77,7 @@ const FilterPanel = ({ data, onFilter }) => {
         <ImgBrand
           src={chevron}
           alt="Chevron icon"
+          style={chevronRotation1 ? {transform:"rotate(180deg)"} : {transform:"rotate(0deg)"}}
         />
       </Div>
       <Div>
@@ -81,6 +86,7 @@ const FilterPanel = ({ data, onFilter }) => {
           style={{ width: "125px" }}
           placeholder={'To $'}
           defaultValue={""}
+          onClick={e => setCchevronRotation2(!chevronRotation2)}
         >
           <option key={0} value={0}>{'To $'}</option>
           {allPriceOption()}
@@ -90,7 +96,11 @@ const FilterPanel = ({ data, onFilter }) => {
             </option>
           ))}
         </Select>
-        <ImgPrice src={chevron} alt="Chevron icon" />
+        <ImgPrice
+          src={chevron}
+          alt="Chevron icon"
+          style={chevronRotation2 ? {transform:"rotate(180deg)"} : {transform:"rotate(0deg)"}}
+        />
       </Div>
       <DivInput>
         <Label>Сar mileage / km</Label>

@@ -121,6 +121,19 @@ export const Button = styled.button`
   border-radius: 14px;
   background: var(--bg-button-color);
   border: none;
+  transition: background-color 250ms linear;
+
+  &:active {
+    background-color: var(--bg-active-button-color);
+  }
+
+  &:focus {
+    background-color: var(--bg-active-button-color);
+  }
+
+  &:hover {
+    background-color: var(--bg-active-button-color);
+  }
 `;
 
 export const ImgBrand = styled.img`
@@ -130,18 +143,6 @@ export const ImgBrand = styled.img`
   height: 20px;
   margin-left: 186px;
   margin-top: -34px;
-
-  &:active {
-    // transform:rotate(180deg);
-  }
-
-  &:focus {
-    transform:rotate(180deg);
-  }
-
-  &:hover {
-    transform:rotate(180deg);
-  }
 `;
 
 export const ImgPrice = styled.img`
@@ -151,16 +152,4 @@ export const ImgPrice = styled.img`
   height: 20px;
   margin-left: 87px;
   margin-top: -34px;
-
-  &:active {
-    // transform:rotate(180deg);
-  }
-
-  &:focus {
-    transform:rotate(180deg);
-  }
-
-  &:hover {
-    transform:rotate(180deg);
-  }
 `;

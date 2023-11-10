@@ -11,13 +11,13 @@ const AdressBar = () => {
   return (
     <Ul>
       <li>
-        <b><A href="tel:+380730000000"> <BsFillTelephoneFill /> +380730000000</A></b>
+        <b><A href="tel:+380730000000"> <BsFillTelephoneFill style={{position: "relative", top: "4px", right: "-25px", color: "#FFF"}}/> <BsFillTelephoneFill style={{position: "relative", top: "3px"}}/> +380730000000</A></b>
       </li>
       <li>
-        <b><span> <MdLocationPin /> c. ​​Beautiful, st. Uyutnaya 5, office 1 </span></b>
+        <b><span> <MdLocationPin style={{position: "relative", top: "4px", right: "-19px", color: "#FFF"}}/><MdLocationPin style={{position: "relative", top: "3px"}}/> c. ​​Beautiful, st. Uyutnaya 5, office 1 </span></b>
       </li>
       <li>
-        <b><A href="mailto:kcn@gmail.com"> <AiOutlineMail /> kcn@ggmail.com</A></b>
+        <b><A href="mailto:kcn@gmail.com"> <AiOutlineMail style={{position: "relative", top: "4px", right: "-20px", color: "#FFF"}}/><AiOutlineMail style={{position: "relative", top: "3px"}}/> kcn@ggmail.com</A></b>
       </li>
     </Ul>
   )

@@ -84,7 +84,7 @@ export const Button = styled.button`
   border-radius: 12px;
   transition: background-color 250ms linear;
 
-  :hover {
+  &:hover {
     background-color: var(--bg-active-button-color);
   }
 `;
@@ -104,7 +104,7 @@ export const FavoriteBtn = styled.button`
   background: transparent;
   transition: transform 250ms linear;
 
-  :hover {
+  &:hover {
     transform: scale(1.2);
   }
 `;

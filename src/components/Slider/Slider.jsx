@@ -50,8 +50,7 @@ class CarsSlider extends React.Component {
             <img src={car5} alt="car 3" style={{width: "300px", height: "200px"}}/>
           </div>        
         </Slider>
-      </div>
-      
+      </div>      
     );
   }
 }

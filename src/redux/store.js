@@ -12,6 +12,7 @@ import storage from "redux-persist/lib/storage";
 import { configureStore } from "@reduxjs/toolkit";
 import { advertsReducer } from "./sliceAdverts";
 import { favoriteReducer } from "./sliceFavorite";
+import formReducer from './sliceForm';
 
 const favoritesPersistConfig = {
   key: "favorites",
@@ -22,6 +23,7 @@ export const store = configureStore({
   reducer: {
     adverts: advertsReducer,
     favorites: persistReducer(favoritesPersistConfig, favoriteReducer),
+    form: formReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
@@ -32,3 +34,15 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+
+
+// import { configureStore } from '@reduxjs/toolkit';
+// import formReducer from './formSlice';
+
+// const store = configureStore({
+//   reducer: {
+//     form: formReducer,
+//   },
+// });
+
+// export default store;

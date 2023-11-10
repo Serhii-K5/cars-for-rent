@@ -5,7 +5,7 @@ import BgLogoImg from "assets/images/logo.png";
 export const BgLogo = styled.div`
   position: relative;
   top: 8px;  
-  width: 140px;
+  width: 130px;
   background-image: url(${BgLogoImg});
   background-repeat: no-repeat;
   // background-position: 50% 0;
@@ -16,7 +16,7 @@ export const TextLogo = styled.p`
   position: relative;
   top: -12px;
   text-align: left;
-  font-size: 45px;
+  font-size: 40px;
   text-shadow: 1px 1px 0px rgba(255,255,255,20);
 `;
 
@@ -52,7 +52,7 @@ export const NavContainer = styled.nav`
 export const NavLinkStyle = styled(NavLink)`
   color: #000;
   position: relative;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 700;  
   text-shadow: 1px 1px 0px rgba(255,255,255,20);
   

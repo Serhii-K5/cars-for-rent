@@ -7,8 +7,8 @@ export const Ul = styled.ul`
   padding: 16px 24px;
   color: var(----text-color-primary-black);
   
-  gap: 30px;
-  font-size: 18px;
+  // gap: 30px;
+  font-size: 19px;
   // text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
   text-shadow: 1px 1px 0px rgba(255,255,255,20);
 
@@ -18,8 +18,12 @@ export const Ul = styled.ul`
 export const A = styled.a`
   // color: inherit;  
   // color: var(--text-color-blue);
-  text-align: center;
+  // text-align: center;
   // text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+
+  // display: flex;
+  // gap: 8px;
+  // align-items: center;
 
   // color: rgba(0,0,0,0.6);
   color: var(----text-color-primary-black);
@@ -33,3 +37,4 @@ export const A = styled.a`
     color: var(--text-color-active-blue);
   }
 `;
+
