@@ -7,7 +7,7 @@ export const Ul = styled.ul`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  column-gap: 29px;
+  column-gap: 25px;
   row-gap: 50px;
   padding-bottom: 30px;
 `;

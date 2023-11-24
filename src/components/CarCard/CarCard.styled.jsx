@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   width: 274px;
   flex-direction: column;
-  gap: 28px;
+  gap: 25px;
 `;
 
 export const Img = styled.img`
