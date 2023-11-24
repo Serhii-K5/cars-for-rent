@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cars-for-rent/static/css/main.92bce7b8.css",
-    "main.js": "/cars-for-rent/static/js/main.fc5b9f18.js",
+    "main.js": "/cars-for-rent/static/js/main.ff09c891.js",
     "static/media/cars-rent.jpg": "/cars-for-rent/static/media/cars-rent.bccfea824238e2ee519e.jpg",
     "static/media/car-rent-5.jpg": "/cars-for-rent/static/media/car-rent-5.c5093a66007a2a260a93.jpg",
     "static/media/car-rent-1.jpg": "/cars-for-rent/static/media/car-rent-1.e51c1a3e5d3af001cda5.jpg",
@@ -16,10 +16,10 @@
     "static/media/cross.svg": "/cars-for-rent/static/media/cross.f3cbdd58dc25ca7cbb3d242106b56fb9.svg",
     "static/media/chevron-down.svg": "/cars-for-rent/static/media/chevron-down.24cd320d509ea2ebbeb4265f8030bafb.svg",
     "main.92bce7b8.css.map": "/cars-for-rent/static/css/main.92bce7b8.css.map",
-    "main.fc5b9f18.js.map": "/cars-for-rent/static/js/main.fc5b9f18.js.map"
+    "main.ff09c891.js.map": "/cars-for-rent/static/js/main.ff09c891.js.map"
   },
   "entrypoints": [
     "static/css/main.92bce7b8.css",
-    "static/js/main.fc5b9f18.js"
+    "static/js/main.ff09c891.js"
   ]
 }
